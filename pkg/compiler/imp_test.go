@@ -197,7 +197,7 @@ func Test063SprintfOneSlice(t *testing.T) {
 		pp("go:'%s'  -->  '%s' in lua\n", src, string(translation))
 
 		cv.So(string(translation), cv.ShouldMatchModuloWhiteSpace,
-			`a = fmt.Sprintf("yee %v %v %v haw\n", _gi_UnpackSliceRaw(_gi_NewSlice("emptyInterface",{[0]=4LL, 5LL, 6LL}, nil)));`)
+			`a = fmt.Sprintf("yee %v %v %v haw\n", _gi_UnpackSliceRaw(_gi_NewSlice(__type__emptyInterface,{[0]=4LL, 5LL, 6LL}, nil)));`)
 
 		LoadAndRunTestHelper(t, vm, translation)
 

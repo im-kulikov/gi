@@ -1904,7 +1904,7 @@ __gi_interfaceType = function(methods)
          joinme = __mapFuncOverTable(methods, __methodNameHelper)
          str = "interface { " .. table.concat(joinme, "; ") .. " }";
       end
-      typ = __gi_NewType(16, __gi_kind_Interface, str, false, "", false, nil);
+      typ = __gi_NewType(16, __gi_kind_Interface, "", str, str, false, "", false, nil);
       __gi_interfaceTypes[typeKey] = typ;
       typ.__init(methods);
    end
