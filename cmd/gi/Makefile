@@ -34,7 +34,7 @@ build:
 
 
 install:
-	export CGO_LDFLAGS_ALLOW="${GOPATH}/src/github.com/gijit/gi/vendor/github.com/glycerine/golua/lua/../../../LuaJIT/LuaJIT/src/libluajit.a"; make build
+	make build
 	cp -p gi ${GOPATH}/bin/
 
 # Cleans our project: deletes binaries
